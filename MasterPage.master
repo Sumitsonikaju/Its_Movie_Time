@@ -1,0 +1,86 @@
+﻿
+  <%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <title></title>
+    <style type="text/css">
+        body{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: 'Montserrat', sans-serif;
+            background: #8E0E00;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #000000ed, #8E0E00);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #000000ed, #8E0E00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+        }
+    	.heading{
+
+    	        width:200px;
+                height:5vh;	        
+                font-size:20px;
+                font-weight:bolder;
+                padding:20px;
+                text-align: left;
+                color: #e50914;
+                margin-left:20px;
+                font-family: 'Dela Gothic One', cursive;
+                display:inline-block;
+                }
+            .bgimage {
+    background-image:url("#");
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    
+    
+    }
+          
+            .b3{
+                background-color: rgba(0,0,0,-0.9);
+                color:white;
+                font-size:15px;
+                font-weight:bolder;
+                border:none;
+                outline:none;
+                
+                 
+        }
+           .buttons{
+               float:right;
+               margin-top: -35px;
+               margin-right: 40px;
+           }
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+ 
+        <div class="heading">
+    		    Sony-X
+    	 </div>
+        
+
+    <form id="form1" runat="server">
+    <div>
+    	  
+        <div class="buttons">
+            <asp:Button ID="Button1" runat="server" Text="Home" class="b3" OnClick="Button1_Click"/>
+            <asp:Button  ID="Button2" runat="server" Text="Sign Out" class="b3" OnClick="Button2_Click" />
+        </div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        </div>
+        
+            </form>
+ 
+</body>
+</html>
